@@ -45,6 +45,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 20px;
 }
 
 .navbar__info {
@@ -67,8 +68,17 @@ img {
           flex-direction: column;
 }
 
+.navbar__address {
+  color: #333333;
+  font-size: 13px;
+  font-weight: 400;
+}
+
 .navbar__button {
   margin-left: 30px;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .navbar__phone {
@@ -77,7 +87,7 @@ img {
   font-size: 20px;
   font-weight: 400;
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 9px;
 }
 
 @media (max-width: 768px) {
