@@ -7,7 +7,7 @@ img {
 }
 
 .container {
-  width: 1170px;
+  width: 1171px;
   margin: auto;
 }
 
@@ -147,7 +147,7 @@ img {
 .hero-text {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
-  padding-right: 33px;
+  padding-right: 35px;
 }
 
 .hero-text__title {
@@ -199,19 +199,6 @@ img {
 
 .hero-list__text {
   max-width: 300px;
-}
-
-.hero-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  max-width: 570px;
 }
 
 @media (max-width: 1200px) {
