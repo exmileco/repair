@@ -1,0 +1,83 @@
+.offer
+  background: url('../img/offer/offer-bg.png') no-repeat
+  background-position: center right
+  background-size: contain
+  position: relative
+  &:before
+    content: ''
+    width: 50%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    background-color: #ffffff
+  &-block
+    width: 49%
+    padding-right: 80px
+    position: relative
+  &__title
+    max-width: 360px
+    line-height: 35px
+    margin-bottom: 20px
+    // letter-spacing: 0.1px
+    // margin-top: 84px
+  &__subtitle
+    max-width: 250px
+    margin-bottom: 30px
+  &__input
+    margin-bottom: 25px
+    width: 238px
+    min-height: 65px
+    &:first-child
+      margin-right: 10px
+    &:focus
+        border: 1px solid $border-input-focus
+  &__button
+    width: 100%
+    min-height: 70px
+    margin-bottom: 25px
+    +bold
+  &-text
+    display: flex
+    &__callback
+      // display: block
+      width: 290px
+      padding-right: 65px
+      font-size: 15px
+      font-weight: 400
+      line-height: 24px
+  &-contactus
+    display: flex
+    flex-direction: column
+    font-size: 15px
+    font-weight: 400
+    line-height: 24px
+    &__callus
+      // margin-bottom: 10px
+    &__phone
+      display: inline-block
+      color: $text-color
+      font-size: 15px
+      text-decoration: none
+      // margin-top: 9px
+      +bold
+@media (max-width: 1200px)
+  background-size: cover
+  .offer
+    &__input
+      width: 100%
+      margin-bottom: 10px
+    &__button
+      font-size: 14px  
+@media (max-width: 768px)
+  .offer
+    background: #ffffff
+    &-block
+      width: 100%
+      padding-right: 0
+    &__input
+      width: 100%
+      margin-bottom: 10px
+      font-size: 15px
+    &__button
+      font-size: 14px  
