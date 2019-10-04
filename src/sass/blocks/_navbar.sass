@@ -6,7 +6,7 @@
     align-items: center
   &__info
     display: flex
-    align-items: center
+    // align-items: center
     // justify-content: flex-end
     text-align: right
   &__contacts
@@ -16,16 +16,16 @@
     color: $text-color
     font-size: 13px
   &__button
-    margin-left: 30px
+    margin-left: 27px
     color: $text-color
     font-size: 13px
     +bold
   &__phone
-    display: inline-block
+    display: block
     color: $text-color
     font-size: 20px
     text-decoration: none
-    margin-top: 9px
+    margin-top: 6px
     +bold
 @media (max-width: 768px)
   .navbar
@@ -41,4 +41,6 @@
   .navbar
     padding: 0 
     &-block
-      margin-top: 16px
+      margin-top: 14px
+    &__button
+    // margin-left: 40px

@@ -7,6 +7,14 @@ img
 .container
   width: 1170px
   margin: auto
+.section
+  padding: 60px 0
+  &-title
+    font-size: 23px
+    +bold
+  &-subtitle
+    display: block
+    font-size: 16px
 @media (max-width: 1200px)
   .container
     width: 760px
@@ -22,10 +30,19 @@ img
     border-radius: 5px
 @media (max-width: 320px)
   .container
-    max-width: 277px
-    width: 85%
+    max-width: 280px
+    width: 93%
   .button
     border-radius: 5px !important
+    padding: 19px 62px
+  .section
+    padding: 49px 0
+    &-title
+      font-size: 18px
+      +bold
+    &-subtitle
+      font-size: 14px
+
 .button
   border-radius: 10px
   background-color: $main-color
@@ -34,14 +51,7 @@ img
   &:hover
     background-color: lighten($main-color, 10%)
     cursor: pointer
-.section
-  padding: 60px 0
-  &-title
-    font-size: 24px
-    +bold
-  &-subtitle
-    display: block
-    font-size: 16px
+
 .input
   border: 1px solid $border-input
   padding: 20px 26px
