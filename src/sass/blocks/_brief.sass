@@ -1,0 +1,159 @@
+.brief
+  background-image: url('../img/brief/brief-bg-color.jpg'), url('../img/brief/brief-form-bg.jpg')
+  background-postion: left center, right center
+  background-size: 50%, contain
+  background-repeat: repeat-Y, no-repeat
+  padding: 76px 0
+  &-block
+    display: flex
+  &__interview
+    flex-basis: 50%
+  &__form
+    flex-basis: 50%
+    padding-left: 213px
+    text-align: center
+  &__input
+    width: 100%
+    max-width: 370px
+    margin-bottom: 15px
+    font-size: 15px
+    font-weight: 400
+    line-height: 24px
+  &__button
+    margin-top: 12px
+    margin-bottom: 28px
+    height: 70px
+    width: 100%
+    max-width: 370px
+.interview
+  padding-right: 69px
+  &__title
+    margin-bottom: 30px
+    font-size: 22px
+    line-height: 33px
+    +bold
+  &__subtitle
+    display: block
+    font-size: 16px
+    font-weight: 400
+    line-height: 45px
+    margin-bottom: 81px
+  &-list
+    list-style: none
+    padding: 0
+    &__item
+      display: flex
+      align-items: center
+      margin-bottom: 26px
+      padding: 0
+      // +bold
+    &__text
+      max-width: 400px
+      font-size: 18px
+      font-weight: 400
+      line-height: 28px
+    &__counter
+      display: inline-block
+      width: 35px
+      height: 35px
+      border: 2px solid $text-color
+      border-radius: 50%
+      text-align: center
+      line-height: 35px
+      margin-right: 32px
+      font-size: 14px
+      font-weight: 400
+.form
+  &__title
+    margin-bottom: 30px
+    font-size: 22px
+    font-weight: 400
+    line-height: 33px
+  &__subtitle
+    display: block
+    font-size: 16px
+    font-weight: 400
+    line-height: 45px
+    margin-bottom: 36px
+  &__description
+    display: block
+    font-size: 15px
+    font-weight: 400
+    line-height: 24px
+@media (max-width: 1200px)
+  .brief
+    &__form
+      padding-right: 30px
+  .interview
+    padding-right: 30px
+    &__title
+      font-size: 20px
+      margin-bottom: 16px
+    &__subtitle
+      margin-bottom: 39px
+      font-size: 14px
+    &-list
+      &__text
+        font-size: 14px
+        max-width: 231px
+      &__counter
+        margin-right: 20px
+@media (max-width: 320px)
+  .brief
+    background-image: url('../img/brief/brief-bg-color.jpg'), url('../img/brief/brief-form-bg.jpg')
+    background-postion: top center, bottom center
+    background-size: 100% 50%, cover
+    background-repeat: repeat-x, no-repeat
+    padding-top: 25px
+    padding-bottom: 32px
+    &-block
+      flex-direction: column
+    &__form
+      padding-left: 0
+      margin-top: 90px
+      padding-right: 0
+    &__interview
+      flex-basis: 100%
+    &__input
+      margin-bottom: 7px
+    &__button
+      margin-top: 2px
+      margin-bottom: 26px
+  .interview
+    padding-right: 0
+    // margin-top: 46px
+    &__title
+      max-width: 220px
+      font-size: 18px
+      font-weight: 400
+      margin-bottom: 16px
+      line-height: 21px
+    &__subtitle
+      max-width: 175px
+      margin-bottom: 39px
+      font-size: 14px
+      line-height: 16px
+    &-list
+      &__text
+        font-size: 14px
+        max-width: 240px
+        line-height: 14px;
+      &__counter
+        margin-right: 8px
+      &__item
+        &:last-child
+          margin-bottom: 0
+  .form
+    &__title
+      font-size: 18px
+      margin-bottom: 8px
+      line-height: 25.35px
+    &__subtitle
+      margin-bottom: 18px
+      font-size: 14px
+    &__description
+      max-width: 140px
+      margin: auto
+      font-size: 14px
+      font-weight: 400
+      line-height: 24px
