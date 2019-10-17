@@ -1,18 +1,18 @@
 .price
-  padding: 89px 0
+  padding: 88px 0
   &__title
     margin: auto
     margin-bottom: 39px
-    font-size: 30px
-    font-weight: 400
-    line-height: 45px
+    // font-size: 30px
+    // font-weight: 400
+    // line-height: 45px
     max-width: 530px
   &__subtitle
     margin-bottom: 47px
     text-align: center
-    font-size: 20px
-    font-weight: 400
-    line-height: 45px
+    // font-size: 20px
+    // font-weight: 400
+    // line-height: 45px
   &__card
     margin-bottom: 30px
 .card
@@ -68,10 +68,92 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+@media (max-width: 1200px)
+  .price
+    &__card
+      margin-right: 30px
+  .card
+    &s
+      justify-content: center
+@media (max-width: 960px)
+  .price
+    &__card
+      flex-basis: 48%
+      margin-right: 10px
+    &__title
+      font-size: 24px
+    &__subtitle
+      font-size: 16px
+  .card
+    &__title
+      font-size: 15px
+    &__image
+      max-width: 100%
+    &__link
+      font-size: 13px
+    &s
+      justify-content: center
+@media (max-width: 768px)
+  .price
+    &__card
+      flex-basis: 48%
+      margin-right: 10px
+    &__title
+      font-size: 20px
+    &__subtitle
+      font-size: 16px
+  .card
+    &__title
+      font-size: 15px
+    &__image
+      max-width: 100%
+    &__link
+      font-size: 13px
+    &s
+      justify-content: center
+@media (max-width: 567px)
+  .price
+    padding: 47px 0 10px 0
+    &__card
+      flex-basis: 70%
+      margin-bottom: 27px
+    &__title
+      max-width: 100%
+      font-size: 18px
+      font-weight: 400
+      margin-bottom: 9px
+      line-height: 22px
+    &__subtitle
+      // width: 150px
+      font-size: 14px
+      font-weight: 400
+      line-height: 45px
+      text-align: center
+      margin-bottom: 46px
+  .card
+    // &s
+    //   width: 100%
+    //   max-width: 100%
+    &__title
+      font-size: 14px
+      font-weight: 400
+      line-height: 44px
+    &__link
+      padding-top: 0
+      font-size: 16px
+      font-weight: 400
+      line-height: 18px
+    &__text 
+      padding: 47px 0 35px 0
+    &__image
+      max-width: 100%
+      max-height: 191px
+      margin: auto
 @media (max-width: 320px)
   .price
     padding: 47px 0 10px 0
     &__card
+      flex-basis: 100%
       margin-bottom: 27px
     &__title
       width: 242px
@@ -87,7 +169,9 @@
       text-align: center
       margin-bottom: 46px
   .card
-    width: 98%
+    // &s
+    //   width: 100%
+    //   max-width: 100%
     &__title
       font-size: 14px
       font-weight: 400
@@ -98,7 +182,7 @@
       font-weight: 400
       line-height: 18px
     &__text 
-      padding: 14px 0 35px 0
+      padding: 17px 0 35px 0
     &__image
       max-width: 270px
       max-height: 191px

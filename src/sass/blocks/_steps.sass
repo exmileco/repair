@@ -50,9 +50,45 @@
     &-block
       display: flex
       flex-wrap: wrap
-@media (max-width: 768px)
+@media (max-width: 1200px)
   .step
     margin-bottom: 30px
+    &__text
+      font-size: 12px
+      font-weight: 400
+      line-height: 16px
+
+@media (max-width: 960px)
+  .step
+    flex-basis: 30%
+    margin-bottom: 30px
+    &__text
+      margin-bottom: 10px
+    &:nth-child(3)
+      &:after
+        display: none 
+        // top: 113px
+        // transform: rotateZ(90deg)
+    &__text
+      font-size: 12px
+      font-weight: 400
+      line-height: 16px
+    &s
+      &__title
+        font-size: 24px
+      &__subtitle
+        font-size: 16px
+      &-block
+        // flex-direction: column
+        flex-wrap: wrap
+        justify-content: center
+@media (max-width: 768px)
+  .step
+    flex-basis: 50%
+    padding-bottom: 30px
+    // &:nth-child(2n)
+    //   &:after
+    //     display: none 
     &:after
      display: none 
     &__text
@@ -60,8 +96,12 @@
       font-weight: 400
       line-height: 16px
     &s
+      &__title
+        font-size: 24px
       &-block
-        flex-direction: column
+        flex-wrap: wrap
+        justify-content: center
+        // flex-direction: column
 @media (max-width: 320px)
   .step
     // margin-bottom: 28px

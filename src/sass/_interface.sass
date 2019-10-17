@@ -13,30 +13,81 @@ img
   // padding: 60px 0
   // height: 596px
   &-title
-    font-size: 23px
+    font-size: 30px
+    font-weight: 400
+    line-height: 45px
     max-width: 500px
     +bold
     text-align: center
   &-subtitle
     display: block
-    font-size: 16px
+    font-size: 20px
+    font-weight: 400
+    line-height: 45px
 @media (max-width: 1200px)
   .container
     width: 760px
+    width: 90%
+  .section
+    // padding: 60px 0
+    // height: 596px
+    &-title
+      font-size: 24px
+      max-width: 500px
+      +bold
+      text-align: center
+    &-subtitle
+      display: block
+      font-size: 16px
+@media (max-width: 960px)
+  .container
+    max-width: 760px
+    width: 90%
+  .section
+    // padding: 60px 0
+    // height: 596px
+    &-title
+      font-size: 24px
+      max-width: 500px
+      +bold
+      text-align: center
+    &-subtitle
+      display: block
+      font-size: 16px
 @media (max-width: 768px)
   .container
     max-width: 580px
     width: 90%
+  .section
+  // padding: 60px 0
+  // height: 596px
+  &-title
+    font-size: 22px
+    max-width: 500px
+    +bold
+    text-align: center
+  &-subtitle
+    display: block
+    font-size: 14px
 @media (max-width: 567px)
   .container
     max-width: 487px
     width: 95%
   .button
     border-radius: 5px
+  .section
+    padding: 42px 0
+    &-title
+      font-size: 18px
+      +bold
+    &-subtitle
+      font-size: 14px
+
 @media (max-width: 320px)
   .container
     max-width: 280px
     width: 95%
+    margin: auto
   .button
     border-radius: 5px !important
     padding: 19px 60px
@@ -55,28 +106,47 @@ img
   background-color: $main-color
   border: none
   padding: 18px 30px
+  // width: 100%
   &:hover
     background-color: lighten($main-color, 10%)
     cursor: pointer
   &:focus
     outline: none !important
+  &-group
+    position:  relative
+    // width: 98%
+    &__width
+      width: 96%
 
 .input
   border: 1px solid $border-input
-  padding: 20px 25px
+  padding: 20px 22px
   font-size: 15px
   border-radius: 10px
-  flex-basis: 50%
+  // flex-basis: 50%
   // postion: relative
+  &-group_transforming
+    position: relative
+    width: 47%
+    &__margin
+      margin-right: 12px
   &-group
     position: relative
-    padding: 0
-    margin: 0
+    width: 100%
+    // padding: 0
+    // margin: 0
   &:focus
     outline: none !important
     border-radius: 10px
     border: 1px solid $border-input-focus
-
+@media ( max-width: 960px )
+  .input
+    &-group_transforming
+      width: 100%
+      &__margin
+        margin-right: 0
+    &-group
+      width: 100%
 .buttonup
   max-width: 70px
   display: none
@@ -91,11 +161,28 @@ img
     cursor: pointer
     opacity: 1
     color: #ff0000
+@media (max-width: 768px)
+  .buttonup
+    display: none
+    max-width: 50px
+  .input
+    &-group_transforming
+      width: 100%
+      &__margin
+        margin-right: 0
+    &-group
+      width: 100%
 @media (max-width: 320px)
   .buttonup
     display: none
     max-width: 30px
-
+  .input
+    &-group_transforming
+      width: 100%
+      &__margin
+        margin-right: 0
+    &-group
+      width: 100%
 .arrows
   &__left, &__right
     &:hover
@@ -120,8 +207,20 @@ em.invalid
   font-weight: 800
   width: 95%
   // border: 1px solid blue
+em.message
+  text-align: center
+  position: absolute
+  top: 76px
+  left: 0px
+  color: white
+  background-color: green
+  font-weight: 800
+  width: 97%
 .form
   display: flex
   flex-wrap: wrap
   justify-content: center
 
+.map
+   width: 100% 
+   height: 640px

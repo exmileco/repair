@@ -11,6 +11,7 @@ a
   width: 50%
   top: 0
   left: 0
+  height: 640px
 .contacts
   flex-basis: 50%
   padding-top: 69px
@@ -38,13 +39,46 @@ a
     &__item
       display: flex
       align-items: flex-start
-      margin-bottom: 28px
+      margin-bottom: 29px
     &__text
       font-size: 16px
       line-height: 26px
       display: inline-block
       color: $text-color
-      max-width: 195px
+      max-width: 190px
+@media (max-width: 960px)
+  .footer
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    padding-top: 12px
+  .map
+    position: absolute
+    width: 100%
+    left: 0
+    top: 457px
+  .contacts
+    flex-basis: 40%
+    padding-top: 34px
+    padding-left: 0
+    padding-bottom: 0
+    &__title
+      margin-bottom: 33px
+      font-size: 18px
+      line-height: 1.2
+      +bold
+    &-list
+      &__icon
+        margin-right: 12px
+        padding-top: 7px
+    &-block
+      justify-content: center
+@media (max-width: 768px)
+  .contacts
+    flex-basis: 60%
+    &-list
+      &__text
+        max-width: 100%
 @media (max-width: 320px)
   .footer
     display: flex
