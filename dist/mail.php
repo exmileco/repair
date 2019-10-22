@@ -4,8 +4,17 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 // Переменные, которые отправляет пользователь
-$userName = $_POST['off_username'];
-$userPhone = $_POST['off_phone'];
+// if(!isset($_POST['off_username'])||!isset($_POST['off_phone'])) {
+//     return error;
+// }
+
+// if (isset($_POST['username']) && isset($_POST['phone'])){
+    $userName = $_POST['off_username'];
+    $userPhone = $_POST['off_phone'];
+//     echo "данные пришли такие: Имя - " . $_POST['off_username'] . " Телефон - " . $_POST['off_phone'];
+// } else {
+//     echo "Данные не были переданы.";
+// }
 
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
@@ -36,8 +45,8 @@ try {
     $mail->Body    = "<b>Имя:</b> $userName <br><b>телефон:</b> $userPhone";
 // Проверяем отравленность сообщения
 if ($mail->send()) {
-    header('Location: thanks.php');
-    echo "Сообщение успешно отправлено";
+    // header('Location: thanks.php');
+    echo "Сообщение успешно отправлено. Имя: " . $userName . " телефон: " . $userPhone;
 } else {
     echo "Сообщение не было отправлено. Неверно указаны настройки вашей почты";
 }

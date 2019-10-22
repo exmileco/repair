@@ -7,7 +7,7 @@ const tinfier = require('gulp-tinifier');
 var options = {
   key: 'vl70KZXvc5M4SZdDWHqSTcRpJdw93PMw',
   verbose: true
-}
+};
 var gutil = require('gulp-util');
 var ftp = require('gulp-ftp');
 var replace = require('gulp-replace-async');

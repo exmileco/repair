@@ -85,7 +85,7 @@
 @media (max-width: 768px)
   .step
     flex-basis: 50%
-    padding-bottom: 30px
+    margin-bottom: 30px
     // &:nth-child(2n)
     //   &:after
     //     display: none 
@@ -104,24 +104,43 @@
         // flex-direction: column
 @media (max-width: 320px)
   .step
-    // margin-bottom: 28px
+    margin-bottom: 20px
     flex-basis: 100%
     &:after
       display: none 
     &:nth-child(4)
       .step__text
-        max-width: 133px
+        max-width: 140px
         margin: auto
+    &:nth-child(1)
+      .step__text
+        padding-top: 0
+    &:nth-child(5)
+      .step__image
+        margin-top: 5px
+      .step__text
+        padding-top: 10px
+    &s
+      padding-bottom: 94px
+    //   .step__image
+    //     margin-bottom: 28px
+    // &:nth-child(2)
+    //   .step__image
+    //     margin-bottom: 28px
+    // &:nth-child(3)
+    //   .step__image
+    //     margin-bottom: 28px   
     &__text
-      font-size: 12px
+      font-size: 13px
       font-weight: 400
-      line-height: 18px
-      max-width: 128px
+      line-height: 16px
+      max-width: 136px
+      padding-top: 8px
       // letter-spacing: 0px
     &__image
-      margin-bottom: 20px
+      margin-bottom: 19px
     &s
-      padding-top: 12px
+      padding-top: 10px
       &-block
         justify-content: center
       &__title
@@ -133,5 +152,5 @@
         font-size: 14px
         font-weight: 400
         line-height: 45px
-        margin-bottom: 19px
+        margin-bottom: 18px
         

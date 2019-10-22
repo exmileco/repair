@@ -1,7 +1,7 @@
 .portfolio
-  background: $secondary url('../img/portfolio/portfolio-pattern.jpg') repeat-y center left
+  background: $secondary url('../img/portfolio/portfolio-pattern.webp') repeat-y center left
   background-size: 50%
-  padding: 60px 0 16px 0
+  padding: 60px 0 104px 0
   &__title
     max-width: 800px
     margin: auto
@@ -16,31 +16,21 @@
     margin-top: 68px
     display: flex
     justify-content: space-between
-.arrows
-  &__left
-    background: url('../img/portfolio/left-arrow.png') no-repeat
-    background-size: cover
-    width: 45px
-    border: 0
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0);
-    outline: 0 !important
-  &__right
-    background: url('../img/portfolio/right-arrow.png') no-repeat
-    background-size: cover
-    width: 45px
-    border: 0
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0);
-    outline: 0 !important
 .slider
   &__item
-    margin: auto 0
-    max-width: 372px
-@media (max-width: 960px)
+    margin: 0 5px
+  &__image
+    margin: 0 auto
+    width: 370px
+@media (max-width: 1200px)
+  .slider
+    &__image
+      width: 290px
+@media (max-width: 992px)
   .portfolio
+    background: $secondary 
     padding-top: 10px
-    padding-bottom: 0
+    padding-bottom: 80px
     &__title
       font-size: 24px
       font-weight: 400
@@ -55,7 +45,7 @@
 @media (max-width: 768px)
   .portfolio
     padding-top: 10px
-    padding-bottom: 0
+    padding-bottom: 62px
     &__title
       font-size: 24px
       font-weight: 400
@@ -71,7 +61,7 @@
 @media (max-width: 320px)
   .portfolio
     padding-top: 10px
-    padding-bottom: 0
+    padding-bottom: 62px
     &__title
       font-size: 18px
       font-weight: 400
@@ -80,6 +70,9 @@
     &__arrows
       margin-top: 46px
   .slider
-    &__item
+    // &__item
+    //   margin: auto
+    //   max-width: 246px
+    &__image
       margin: auto
-      max-width: 246px
+      width: 246px

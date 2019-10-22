@@ -1,19 +1,23 @@
 .brief
-  background-image: url('../img/brief/brief-bg-color.jpg'), url('../img/brief/brief-form-bg.jpg')
+  background-image: url('../img/brief/brief-bg-color.jpg'), url('../img/brief/brief-form-bg.webp')
   background-position: left center, right center
   background-size: 50%, contain
   background-repeat: repeat-Y, no-repeat
-  padding-top: 74px
-  padding-bottom: 10px
+  // padding-top: 74px
+  // padding-bottom: 95px
   &-block
     display: flex
     // align-items: center
   &__interview
     flex-basis: 50%
+    padding-top: 75px
+    padding-bottom: 100px
   &__form
     flex-basis: 50%
     padding-left: 212px
     text-align: center
+    padding-top: 73px
+    padding-bottom: 90px
     // width: 370px
   &__input
     width: 370px
@@ -40,7 +44,7 @@
     font-size: 16px
     font-weight: 400
     line-height: 45px
-    margin-bottom: 81px
+    margin-bottom: 77px
   &-list
     list-style: none
     padding: 0
@@ -67,6 +71,7 @@
       font-size: 14px
       font-weight: 400
 .form
+  margin: 0
   &__title
     margin-bottom: 30px
     font-size: 23px
@@ -86,6 +91,8 @@
     line-height: 24px
 @media (max-width: 1200px)
   .brief
+    background-position: left center, right top
+    background-repeat: repeat-Y, round
     &__form
       padding-left: 65px
   .interview
@@ -109,7 +116,7 @@
     background-size: 100% 47%, cover
     background-repeat: repeat-x, no-repeat
     padding-top: 30px
-    padding-bottom: 31px
+    padding-bottom: 60px
     &-block
       flex-direction: column
       justify-content: center
@@ -121,10 +128,10 @@
       max-width: 65%
       padding-right: 0
       padding-left: 0
-      padding-top: 60px
+      padding-top: 65px
   .form
     // max-width: 100%
-    margin: auto
+    margin: 0 auto
     &__subtitle
       width: 100%
   .interview
@@ -142,9 +149,9 @@
     background-image: url('../img/brief/brief-bg-color.jpg'), url('../img/brief/brief-form-bg.jpg')
     background-position: top center, bottom center
     background-size: 100% 47%, cover
-    background-repeat: repeat-x, no-repeat
+    background-repeat: no-repeat, no-repeat
     padding-top: 30px
-    padding-bottom: 31px
+    padding-bottom: 45px
     &-block
       flex-direction: column
       justify-content: center
@@ -156,6 +163,7 @@
       max-width: 100%
       padding-right: 0
       padding-left: 0
+      padding-top: 65px
     &__input
       width: 320px
   .form
@@ -174,18 +182,22 @@
   .brief
     background-image: url('../img/brief/brief-bg-color.jpg'), url('../img/brief/brief-form-bg.jpg')
     background-position: top center, bottom center
-    background-size: 100% 47%, cover
+    background-size: 100% 45%, cover
     background-repeat: repeat-x, no-repeat
     padding-top: 30px
-    padding-bottom: 31px
+    padding-bottom: 0px
     &-block
       flex-direction: column
     &__form
       padding-left: 0
-      margin-top: 90px
       padding-right: 0
+      margin-top: 27px
+      padding-right: 0
+      padding-bottom: 30px
     &__interview
       flex-basis: 100%
+      padding-top: 0
+      padding-bottom: 0
     &__input
       margin-bottom: 7px
       width: 278px
@@ -203,17 +215,20 @@
       line-height: 21px
     &__subtitle
       max-width: 175px
-      margin-bottom: 35px
+      margin-bottom: 39px
       font-size: 14px
       line-height: 16px
     &-list
       &__text
         font-size: 14px
         max-width: 240px
-        line-height: 14px;
+        line-height: 18px;
       &__counter
         margin-right: 8px
       &__item
+        margin-bottom: 18px
+        &:nth-child(1)
+          margin-bottom: 28px
         &:last-child
           margin-bottom: 0
   .form

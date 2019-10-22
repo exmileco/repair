@@ -74,7 +74,9 @@ img
     max-width: 487px
     width: 95%
   .button
-    border-radius: 5px
+    border-radius: 10px
+  .input
+    border-radius: 10px
   .section
     padding: 42px 0
     &-title
@@ -89,8 +91,10 @@ img
     width: 95%
     margin: auto
   .button
-    border-radius: 5px !important
+    border-radius: 10px
     padding: 19px 60px
+  .input
+    border-radius: 10px
   .section
     padding: 42px 0
     &-title
@@ -107,17 +111,13 @@ img
   border: none
   padding: 18px 30px
   // width: 100%
-  &:hover
-    background-color: lighten($main-color, 10%)
-    cursor: pointer
   &:focus
     outline: none !important
   &-group
     position:  relative
     // width: 98%
     &__width
-      width: 96%
-
+      width: 100%
 .input
   border: 1px solid $border-input
   padding: 20px 22px
@@ -127,9 +127,9 @@ img
   // postion: relative
   &-group_transforming
     position: relative
-    width: 47%
+    width: 50%
     &__margin
-      margin-right: 12px
+      padding-right: 15px
   &-group
     position: relative
     width: 100%
@@ -144,9 +144,13 @@ img
     &-group_transforming
       width: 100%
       &__margin
-        margin-right: 0
+        padding-right: 0
     &-group
       width: 100%
+  .button
+    &-group
+      &__width
+        width: 100%
 .buttonup
   max-width: 70px
   display: none
@@ -157,10 +161,20 @@ img
   bottom: 50px
   color: #000000
   transition: 0.3s
-  &:hover
-    cursor: pointer
-    opacity: 1
-    color: #ff0000
+@media (min-width: 960px)
+  .buttonup
+    &:hover
+      cursor: pointer
+      opacity: 1
+      color: #ff0000
+  .arrows
+    &__left, &__right
+      &:hover
+        cursor: pointer
+  .button
+    &:hover
+      background-color: lighten($main-color, 10%)
+      cursor: pointer
 @media (max-width: 768px)
   .buttonup
     display: none
@@ -183,10 +197,7 @@ img
         margin-right: 0
     &-group
       width: 100%
-.arrows
-  &__left, &__right
-    &:hover
-      cursor: pointer
+
 
 // .invalid
 //   // text-align: center
@@ -202,10 +213,9 @@ em.invalid
   position: absolute
   top: 0px
   left: 0px
-  color: white
-  background-color: red
+  color: red
   font-weight: 800
-  width: 95%
+  width: 100%
   // border: 1px solid blue
 em.message
   text-align: center
@@ -220,6 +230,9 @@ em.message
   display: flex
   flex-wrap: wrap
   justify-content: center
+  margin: 0
+  padding: 0
+
 
 .map
    width: 100% 

@@ -3,7 +3,7 @@ var modal = document.querySelector('#modal');
 var close = document.querySelector('#close');
 var submodal = document.querySelector('#submodal');
 var closeThanks = document.querySelector('#close-thanks');
-var closeModalTimeout = 5000;
+var closeModalTimeout = 60000;
 var closeTimeoutId;
 var $window = $(window);
 var $elem = $(".step__image");
@@ -27,23 +27,27 @@ closeThanks.addEventListener('click', function () {
 
 new WOW().init();
 $(document).ready(function () {
-  /* Запуск слайдера карусель*/
-  $(".owl-carousel").owlCarousel({
-    loop: true,
-    margin: 10,
-    navContainerClass: "portfolio__arrows",
-    navClass: ["arrows__left", "arrows__right"],
-    responsive: {
-      0: {
-        items: 1
+  $('.slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $('.arrows__left'),
+    nextArrow: $('.arrows__right'),
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
       },
-      600: {
-        items: 2
-      },
-      1000: {
-        items: 3
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
       }
-    }
+    ]
   });
 });
 
@@ -67,6 +71,21 @@ $(document).ready(function () {
         maxlength: jQuery.validator.format("Слишком много символов! Должно быть меньше: {0}.")
       },
       modal_phone: "<b>Заполните поле</b>"
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $('#modal-form').serialize(),
+        success: function (response) {
+          $('#modal-form')[0].reset();
+          modal.classList.remove('modal_active');
+          submodal.classList.add('submodal_active');
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.error(jqXHR + " " + textStatus);
+        }
+      });
     }
   });
   /* Валидация формы offer */
@@ -89,18 +108,15 @@ $(document).ready(function () {
       },
       off_phone: "<b>Заполните поле</b>"
     },
-    submitHandler: function name(event) {
-      // event.preventDefault();
+    submitHandler: function(form) {
       $.ajax({
         type: "POST",
         url: "mail.php",
-        data: $(this).serialize(),
-        success: function appsend (response) {
-          // console.log('прибыли данные: ' + response);
+        data: $('#offer-form').serialize(),
+        success: function (response) {
+          console.log('прибыли данные: ' + response);
           $('#offer-form')[0].reset();
           submodal.classList.add('submodal_active');
-          // $("#offer-button").after('<em class="message">Сообщение успешно отправлено!</em>');
-
         },
         error: function (jqXHR, textStatus, errorThrown) {
           console.error(jqXHR + " " + textStatus);
@@ -135,6 +151,20 @@ $(document).ready(function () {
         required: "<b>Заполните поле</b>",
         email: "<i>Введите корректный email</i>"
       }
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: $('#brief-form').serialize(),
+        success: function (response) {
+          $('#brief-form')[0].reset();
+          submodal.classList.add('submodal_active');
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.error(jqXHR + " " + textStatus);
+        }
+      });
     }
   });
   /* Маска для валидации*/
@@ -198,6 +228,7 @@ function getYaMap() {
   ymaps.geocode("Москва, ул. Ленина, 10").then(function (res) {
     var coord = res.geoObjects.get(0).geometry.getCoordinates();
     var myPlacemark = new ymaps.Placemark(coord, { preset: 'twirl#lightblueIcon' });
+    myMap.controls.add('smallZoomControl', { 'top': 5, 'smooth': true });
     myMap.geoObjects.add(myPlacemark);
     myMap.setCenter(coord);
   });

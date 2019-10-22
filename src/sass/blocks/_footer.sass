@@ -6,6 +6,8 @@ a
   +bold
 .footer
   position: relative
+  margin: 0
+  padding: 0
 .map
   position: absolute
   width: 50%
@@ -13,18 +15,18 @@ a
   left: 0
   height: 640px
 .contacts
-  flex-basis: 50%
+  // flex-basis: 50%
   padding-top: 69px
-  padding-left: 211px
+  padding-right: 64px
   &-block
     display: flex
     justify-content: flex-end
   &__title
     font-size: 23px
-    font-weight: 700
     line-height: 33px
     margin-bottom: 89px
-    max-width: 300px
+    max-width: 310px
+    +bold
   &-list
     padding: 0
     margin: 0
@@ -46,6 +48,13 @@ a
       display: inline-block
       color: $text-color
       max-width: 190px
+// @media (max-width: 1200px)
+//   .contacts
+//     padding-left: 340px
+    // &-block
+    //   justify-content: center
+    
+
 @media (max-width: 960px)
   .footer
     display: flex
@@ -61,6 +70,7 @@ a
     flex-basis: 40%
     padding-top: 34px
     padding-left: 0
+    padding-right: 0
     padding-bottom: 0
     &__title
       margin-bottom: 33px
@@ -76,9 +86,9 @@ a
 @media (max-width: 768px)
   .contacts
     flex-basis: 60%
-    &-list
-      &__text
-        max-width: 100%
+    // &-list
+    //   &__text
+    //     max-width: 270px
 @media (max-width: 320px)
   .footer
     display: flex
@@ -92,7 +102,7 @@ a
   .contacts
     flex-basis: 100%
     padding-top: 34px
-    padding-left: 0
+    padding-right: 0
     padding-bottom: 0
     &__title
       margin-bottom: 33px
@@ -103,5 +113,7 @@ a
       &__icon
         margin-right: 12px
         padding-top: 7px
+      &__text
+        max-width: 270px
 
 

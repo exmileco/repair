@@ -36,25 +36,27 @@
   &__input
     // flex-basis: 50%
     margin-bottom: 29px
-    width: 238px
+    width: 240px
     min-height: 65px
-    &::last-child
-      padding: 20px 31px
+    // &:last-child
+    //   padding: 20px 31px
     // margin-right: 12px
-    &::last-child
+    // &::last-child
       // padding: 20px 32px
     //   margin-right: 0
   &__button
+    max-width: 495px
     width: 100%
     min-height: 70px
     margin-bottom: 26px
     +bold
   &-text
     display: flex
+    justify-content: space-between
     &__callback
       // display: block
-      width: 296px
-      padding-right: 65px
+      max-width: 230px
+      padding-right: 5px
       font-size: 15px
       font-weight: 400
       line-height: 24px
@@ -85,8 +87,9 @@
       // &::last-child
       //   margin-right: 0
     &__button
+      width: 100%
       font-size: 14px  
-@media (max-width: 960px)
+@media (max-width: 993px)
   .offer
     background: #ffffff
     &-block
@@ -106,6 +109,9 @@
       max-width: 100%
       width: 100%
       font-size: 14px 
+    &-text
+      &__callback
+        padding-right: 30px
 @media (max-width: 768px)
   .offer
     background: #ffffff
@@ -118,19 +124,29 @@
       margin-bottom: 10px
     &__button
       font-size: 14px   
+    &-text
+      flex-direction: column
+      // align-items: center
+      &__callback
+        padding-right: 0px
+        max-width: 100%
+    &-contactus
+      &__callus
+        width: 100%
+
 @media (max-width: 320px)
   .offer
     background: #ffffff
     padding: 42px 0
     &-block
-      width: 100%
+      width: 98%
       padding-bottom: 10px
       padding-right: 0
     &__input
       width: 100%
       margin-bottom: 8px
       font-size: 15px
-      padding-left: 21px
+      padding: 20px 20px
     &__button
       font-size: 14px
       margin-bottom: 22px

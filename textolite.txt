@@ -1,0 +1,2 @@
+path: https://gloacad-hw.coffeenglish.com/project/textolite/
+pass: n3wpa33w0rd
