@@ -17,13 +17,13 @@ try {
     $mail->SMTPAuth   = true;
     // Настройки вашей почты
     $mail->Host       = 'smtp.mail.ru'; // SMTP сервера GMAIL
-    $mail->Username   = 'white_tiger75@mail.ru'; // Логин на почте
-    $mail->Password   = 'ptItVR*ioI46'; // Пароль на почте
+    $mail->Username   = 'mail@mail.ru'; // Логин на почте
+    $mail->Password   = 'password'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('white_tiger75@mail.ru', 'Почтовая голубь'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('mail@mail.ru', 'Почтовая голубь'); // Адрес самой почты и имя отправителя
     // Получатель письма
-    $mail->addAddress('exmile.co@gmail.com');  
+    $mail->addAddress('example@gmail.com');  
    
     // -----------------------
     // Само письмо
