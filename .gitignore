@@ -147,7 +147,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # Distribution folder and other non-important folders
-/dist
-/resources
+dist/
+resources/
 
 # End of https://www.gitignore.io/api/node,windows,archives
